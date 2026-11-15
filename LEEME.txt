@@ -1,0 +1,42 @@
+WV Solutions - Sitio web (versión corporativa empresarial)
+=========================================================
+
+Estructura
+----------
+index.html                  -> la página (HTML5 semántico, CSP, Open Graph, JSON-LD)
+css/styles.css              -> estilos (variables de marca en :root, :focus-visible, sticky header)
+js/app.js                   -> interactividad segura sin innerHTML (tabs ARIA, menú móvil, scroll)
+img/                        -> fotos del equipo
+vercel.json                 -> cabeceras de seguridad y caché para Vercel
+_headers                    -> cabeceras de seguridad y caché para Netlify / Cloudflare Pages
+.htaccess                   -> cabeceras de seguridad, HTTPS y caché para Apache / cPanel
+robots.txt                  -> reglas para buscadores
+.well-known/security.txt    -> contacto de seguridad (RFC 9116)
+tests/site.test.mjs         -> suite automatizada de seguridad, accesibilidad y comportamiento
+.github/workflows/          -> pipeline CI/CD DevSecOps en GitHub Actions
+
+Pruebas automatizadas (DevSecOps)
+---------------------------------
+Requiere Node.js >= 20:
+  npm test
+
+Para previsualizar en local:
+  npm run preview
+
+Para publicar: sube el contenido a tu hosting (cPanel, Netlify, Vercel, GitHub Pages, etc.).
+En GitHub Pages, las cabeceras HTTP se apoyan en la etiqueta <meta http-equiv="Content-Security-Policy">.
+
+Pendientes antes de publicar
+----------------------------
+1. Fotos del equipo: guarda las imágenes como
+      img/wilson.jpg
+      img/melissa.jpg
+   (verticales o cuadradas). Mientras no existan, se muestran las iniciales.
+2. Datos de Wilson en index.html (busca los textos entre corchetes [ ]):
+   apellido, cargo, perfil profesional y habilidades.
+3. Revisa los textos de cada servicio en js/app.js (lista SERVICES).
+
+Otros datos
+-----------
+Las fuentes (Poppins y Open Sans) se cargan desde Google Fonts, se necesita internet.
+WhatsApp: los enlaces usan wa.me/573150659653 y wa.me/573222418066.

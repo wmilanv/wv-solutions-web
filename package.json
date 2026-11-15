@@ -1,0 +1,14 @@
+{
+  "name": "wv-solutions-web",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Sitio web corporativo de WV Solutions con controles DevSecOps y pruebas automatizadas.",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node --test tests/*.test.mjs",
+    "preview": "npx --yes http-server . -p 4173 -c-1"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
